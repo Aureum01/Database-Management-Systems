@@ -21,4 +21,13 @@ CREATE TABLE student (
  https://www.sqlite.org/foreignkeys.html#fk_enable
  
  
- 
+ Compositve primary key (SQL and not sqlite)
+ How to create a relationship: 
+
+CREATE TABLE OrderLine
+	(OrderID NUMBER NOT NULL, 
+	ProductID NUMBER NOT NULL, 
+	OrderQuantity INTEGER,
+	CONSTRAINT Orders_PK PRIMARY KEY (OrderID, ProductID)
+	CONSTRAINT Orders_FK1 FOREIGN KEY (OrderID) REFERENCES Orders(OrderID), --> as primary key
+	CONSTRAINT Orders_FK2 FOREIGN KEY (ProductID) REFERENCES Products(ProductID));
