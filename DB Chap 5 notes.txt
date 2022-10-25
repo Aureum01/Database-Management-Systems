@@ -5,5 +5,20 @@ CREATE TABLE student (
  );
  
  TRY: www.sqliteonline.com
+ OR: Glitch for sqlite too
+ 
+ Creating a simple relationship but turning off foreign_key default to allow FK: 
+ 
+ CREATE TABLE Example (
+  Example_2 TEXT(10) NOT NULL, 
+  Example_3 TEXT(5) NOT NULL,
+  CONSTRAINT example_id_PK PRIMARY KEY (Example_2, Example_3)
+  CONSTRAINT example_id_FK FOREIGN KEY (Example_2)
+  
+  
+ Won't work if FK isn't allowed. 
+ 
+ https://www.sqlite.org/foreignkeys.html#fk_enable
+ 
  
  
