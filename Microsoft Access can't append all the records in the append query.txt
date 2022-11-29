@@ -1,0 +1,16 @@
+Microsoft Access can't append all the records in the append query
+
+
+Type conversion failures    You may be trying to append data of one type into a field of another type. For example, appending text into a field whose data type is set to Number will cause the error to appear. Check the data types of fields in the destination table, and then make sure you’re appending the correct type of data into each one.
+
+Key violations    You may be trying to append data into one or more fields that are part of the table’s primary key, such as the ID field. Check the design of the destination table to see if the primary key (or any index) has the No Duplicates property set to Yes. Then, check the data you are appending to make sure it doesn’t violate the rules of the destination table.
+
+Lock violations    If the destination table is open in Design view or open by another user on the network, this could result in record locks that would prevent the query from being able to append records. Make sure everyone’s closed out of the database.
+
+Validation rule violations    Check the design of the destination table to see what validation rules exist. For example, if a field is required and your query doesn’t provide data for it, you’ll get the error. Also, check the destination table for any Text fields where the Allow Zero Length property is set to No. If your query doesn’t append any characters into such a field, you’ll get the error. Other validation rules may also be causing the problem—for example, you may have the following validation rule for the Quantity field:
+
+>=10
+
+In this case, you cannot append records with a quantity less than 10.
+
+Link: https://support.microsoft.com/en-us/office/common-errors-when-you-run-an-append-query-26eecd3b-cbea-45c1-80c4-f5bb50a9ccfa?ns=msaccess&version=90&syslcid=1033&uilcid=1033&appver=zac900&helpid=acmain11.chm10020&ui=en-us&rs=en-us&ad=us
