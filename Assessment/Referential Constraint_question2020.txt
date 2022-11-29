@@ -1,0 +1,11 @@
+LINK TO ORIGINAL ANSWER: https://stackoverflow.com/questions/64437249/adding-foreign-key-to-tables
+
+In order to understand how referential constraints work, take a look at this example answer in order to understand how to link tables through relations.
+Use ALTER TABLE:
+
+ALTER TABLE course_users 
+    ADD FOREIGN KEY (course_id) REFERENCES course (course_id),
+    ADD FOREIGN KEY (userid_DI) REFERENCES users (userid_DI);
+
+
+
