@@ -1,0 +1,9 @@
+CREATE TABLE Office
+(OfficeNum NUMBER NOT NULL,
+OfficeName TEXT(50) NOT NULL,
+OfficeAddress TEXT(50) NOT NULL,
+Area TEXT(20) NOT NULL, 
+City TEXT(20) NOT NULL, 
+State TEXT(2),
+Zip TEXT(5),
+CONSTRAINT OfficeNum_PK PRIMARY KEY (OfficeNum));
