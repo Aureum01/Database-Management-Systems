@@ -9,3 +9,5 @@
 # https://support.microsoft.com/en-us/office/use-like-criterion-to-locate-data-65b07c8a-b314-435a-8b48-2b911856d4f9
 --------------------------------------------------------------------------------------------------------------
 # https://www.fmsinc.com/microsoftaccess/query/outer-join/index.html
+--------------------------------------------------------------------------------------------------------------
+# https://www.w3schools.com/sql/sql_having.asp
